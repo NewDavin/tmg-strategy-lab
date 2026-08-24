@@ -1,0 +1,2 @@
+{"name":"starcraft-tmg-simulator-mvp","version":"0.1.0","type":"module","scripts":{"start":"vite --host 127.0.0.1","build":"vite build","test":"node --test","simulate":"node src/cli.js"},"devDependencies":{"vite":"^8.2.0"}}
+
