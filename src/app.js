@@ -71,7 +71,11 @@ const PHASES=[['MOVEMENT PHASE','배치 · 이동 · 이탈'],['ASSAULT PHASE','
 const resourceType={zerg:'BM',zergMirror:'BM',terran:'CP',terranMirror:'CP',protoss:'EN',protossMirror:'EN'};
 const resourceYield={zerg:{'가속 점막':0,'패스트 산란못':2},zergMirror:{'가속 점막':0,'패스트 산란못':2},terran:{'전진 병영':2,'기술실 병영':2},terranMirror:{'전진 병영':2,'기술실 병영':2},protoss:{},protossMirror:{}};
 function generatedResource(k){return 1+ROSTERS[k].tactical.reduce((n,c)=>n+(resourceYield[k][c.name]??1),0)}
-function raceIcon(race){const r=race.toLowerCase();return '<span class="race-icon '+r+'-icon" role="img" aria-label="'+race+' 문양"><img src="./starcraft-race-emblems-transparent.png" alt=""></span>'}
+function raceIcon(race){
+  const r=race.toLowerCase();
+  const marks={Zerg:'Z',Terran:'T',Protoss:'P'};
+  return '<span class="race-icon '+r+'-icon" role="img" aria-label="'+race+' 추상 표식"><span>'+marks[race]+'</span></span>';
+}
 ROSTERS.zerg.faction='저그 군단';ROSTERS.zergMirror.faction='저그 군단';ROSTERS.terran.faction='테란 정규군';ROSTERS.terranMirror.faction='테란 정규군';ROSTERS.protoss.faction='칼라이';ROSTERS.protossMirror.faction='칼라이';
 ROSTERS.zerg.tactical=[baseCards.zerg[3],baseCards.zerg[9]];ROSTERS.zergMirror.tactical=[baseCards.zergMirror[3],baseCards.zergMirror[9]];ROSTERS.terran.tactical=[baseCards.terran[2],baseCards.terran[7]];ROSTERS.terranMirror.tactical=[baseCards.terranMirror[2],baseCards.terranMirror[7]];ROSTERS.protoss.tactical=[baseCards.protoss[2],baseCards.protoss[7]];ROSTERS.protossMirror.tactical=[baseCards.protossMirror[2],baseCards.protossMirror[7]];
 function rebuild(k){ROSTERS[k].entries=baseEntries[k].flatMap((e,i)=>Array.from({length:counts[k][i]},(_,n)=>({...e,label:e.label+(counts[k][i]>1?' #'+(n+1):'')})))}
