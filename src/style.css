@@ -14,10 +14,10 @@
 .race-icon{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.13em;flex:none}.race-trigger strong{display:flex;align-items:center;gap:8px}.zerg-icon{color:#a6e45b}.terran-icon{color:#67b7ff}.protoss-icon{color:#e7bd55}.log-event span{display:flex;align-items:center;gap:5px}.log-event .race-icon{width:14px;height:14px}.log-event.score span .race-icon:nth-of-type(2){margin-left:3px}.round-races{display:flex;align-items:center;gap:4px;margin-left:auto;font-style:normal}.round-races .race-icon{width:15px;height:15px}.round-races small{font-size:6px;color:var(--muted)}
 .race-icon{object-fit:contain;filter:drop-shadow(0 0 3px currentColor)}.legal-note{margin-top:14px;padding:10px 12px;border-top:1px solid var(--line);color:#70898a;font-size:8px;line-height:1.55;text-align:center}
 .race-icon.zerg-icon{filter:hue-rotate(235deg) saturate(.72) brightness(.98) drop-shadow(0 0 3px #8668a8)}.race-icon.terran-icon{filter:saturate(.68) brightness(.98) drop-shadow(0 0 3px #5b86ad)}.race-icon.protoss-icon{filter:saturate(.7) brightness(.96) drop-shadow(0 0 3px #b89b54)}
-.race-icon{display:inline-block;background-image:url('/starcraft-race-emblems.png');background-repeat:no-repeat;background-size:313.8% 118%;border-radius:18%;filter:brightness(.92) saturate(.82)!important;box-shadow:0 0 5px #0007}.race-icon.protoss-icon{background-position:left center}.race-icon.terran-icon{background-position:center center}.race-icon.zerg-icon{background-position:right center}
+.race-icon{display:inline-grid;place-items:center;border:1px solid currentColor;border-radius:38% 62% 42% 58%;background:linear-gradient(145deg,currentColor 0 7%,transparent 8% 100%);box-shadow:0 0 8px #0007;color:#9ea8a5;font-weight:900;font-size:.56em;line-height:1;transform:rotate(-8deg)}.race-icon>span{transform:rotate(8deg)}.race-icon.protoss-icon{color:#b99b51;border-radius:55% 45% 62% 38%}.race-icon.terran-icon{color:#5e8ea8;border-radius:22%}.race-icon.zerg-icon{color:#8e6aa0;border-radius:50% 28% 50% 28%}
 .race-trigger .race-icon{width:30px;height:30px}
 
-/* Crop the three supplied StarCraft race emblems from one local sprite. */
+/* Original abstract faction markers: no official game artwork is embedded. */
 .race-icon{
   position:relative;
   display:inline-block;
